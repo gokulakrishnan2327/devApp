@@ -1,11 +1,11 @@
-// src/utils/api.js
+// utils/api.js
 import axios from 'axios';
 
-const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000',
   headers: {
-    'Content-Type': 'application/json'
-  }
+    'Content-Type': 'application/json',
+  },
 });
 
-export default API;
+export default api;
